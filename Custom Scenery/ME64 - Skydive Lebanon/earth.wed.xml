@@ -373,7 +373,7 @@
         <child id="51"/>
       </children>
       <hierarchy name="Skydive Lebanon" locked="0" hidden="0"/>
-      <airport kind="Airport" elevation="111.3" has_atc="0" icao="ME64" always_flatten="0" drive_on_left="0" scenery_id="73077"/>
+      <airport kind="Airport" elevation="111.3" has_atc="0" icao="ME64" always_flatten="0" drive_on_left="0" scenery_id="81907"/>
       <meta_data>
         <meta_data_entry pair="city,West Lebanon"/>
         <meta_data_entry pair="country,United States"/>
@@ -405,7 +405,9 @@
     <object class="WED_Select" id="2" parent_id="1">
       <children/>
       <hierarchy name="selection"/>
-      <selection/>
+      <selection>
+        <sel id="5"/>
+      </selection>
     </object>
     <object class="WED_Root" id="1" parent_id="0">
       <children>
@@ -880,17 +882,17 @@
     </pref>
     <pref name="doc/export_target" value="99"/>
     <pref name="doc/xml_compatibility" value="203"/>
-    <pref name="map/east" value="-70.922409"/>
+    <pref name="map/east" value="-70.324977"/>
     <pref name="map/navaid_map_vis" value="0"/>
-    <pref name="map/north" value="43.380456"/>
+    <pref name="map/north" value="43.681880"/>
     <pref name="map/obj_density" value="6"/>
     <pref name="map/pavement_alpha" value="4"/>
     <pref name="map/preview_vis" value="1"/>
     <pref name="map/real_lines_vis" value="1"/>
     <pref name="map/slippy_vis" value="2"/>
-    <pref name="map/south" value="43.365967"/>
+    <pref name="map/south" value="42.881990"/>
     <pref name="map/vertices_vis" value="1"/>
-    <pref name="map/west" value="-70.939137"/>
+    <pref name="map/west" value="-71.241191"/>
     <pref name="map/world_map_vis" value="1"/>
     <pref name="map_Airport Beacon_Kind" value="69"/>
     <pref name="map_Boundary_.Markings" value=""/>
@@ -901,7 +903,7 @@
     <pref name="map_Facades_Pick Walls" value="1"/>
     <pref name="map_Facades_Resource" value=""/>
     <pref name="map_Forests_Density" value="1.000000"/>
-    <pref name="map_Forests_Resource" value=""/>
+    <pref name="map_Forests_Resource" value="lib/g8/broad_cld_dry.for"/>
     <pref name="map_Helipad_Edge Lights" value="15"/>
     <pref name="map_Helipad_Markings" value="67"/>
     <pref name="map_Helipad_Roughness" value="0.250000"/>
@@ -913,7 +915,7 @@
     <pref name="map_Light Fixture_Approach Angle" value="3.000000"/>
     <pref name="map_Light Fixture_Fixture Type" value="35"/>
     <pref name="map_Lines_Resource" value=""/>
-    <pref name="map_Objects_Object" value="lib/airport/Common_Elements/Fueling_Stations/fuel_station_box_white_avgas100LL.obj"/>
+    <pref name="map_Objects_Object" value="lib/garden/pools/pool_Small_7x10.obj"/>
     <pref name="map_Objects_Show with" value="746"/>
     <pref name="map_Polygons_Heading" value="0.000000"/>
     <pref name="map_Polygons_Resource" value=""/>
