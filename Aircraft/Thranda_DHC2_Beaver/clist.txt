@@ -1,0 +1,275 @@
+sw_remark:Thranda de Havilland Canada DHC-2 Beaver NORMAL CHECKLIST by royaloak
+sw_remark:From Thransa DHC2 Documentation
+sw_itemremark:EMERGENCY PROCEDURES IN HANDBOOK and NOT INCLUDED HERE
+sw_continue
+sw_continue:BEFORE FLIGHT
+
+sw_checklist:BEFORE FLIGHT
+sw_item:Choose Panel setup|CHECK
+sw_item:Calibrate Joystick|CHECK
+sw_item:FLIGHTPLAN ROUTE FILE|DOWNLOADED
+sw_item:DEPARTURE WEATER|CHECK & NOTE
+sw_item:ARRIVAL WEATHER|CHECK & NOTE
+sw_item:WEIGHT, BALANCE and FUEL|CHECKED
+sw_item:ACARS and XSQUAWBOX|AS REQUIRED
+sw_item:VOLUMES|CHECK
+sw_continue:EXTERNAL CHECKS
+
+sw_checklist:EXTERNAL CHECKS
+sw_item:All covers and locks|REMOVE:(thranda/covers/IntakeCover:0)&&(thranda/covers/TieDown:0)
+sw_item:Chocks and Tie-Downs|REMOVE:thranda/views/chocks:0
+sw_item:Fuel Filler Caps and access panel|CHECK SECURITY
+sw_item:Landing gear, tires, fairings |CHECK
+sw_item:Carburetor and oil cooler intakes |CHECK for obstructions (clean if required)
+sw_item:Propeller |CHECK for nicks and oil leaks
+sw_item:Cowling |CHECK security and for dents
+sw_item:Tailwheel and tire |CHECK condition and tire pressure
+sw_item:Pitot Tube |CHECK cover removed, tube not blocked:thranda/covers/PitotCoverL:0
+sw_continue
+sw_continue:LOAD & FUELING
+
+sw_checklist:LOAD & FUELING
+sw_item:Load & Fueling|COMPLETE
+sw_continue
+sw_continue:ENTERING THE AIRCRAFT
+
+
+sw_checklist:ENTERING THE AIRCRAFT
+sw_item:Ignition Switch OFF:thranda/starter_key1:0
+sw_item:Parking brake|SET:(sim/flightmodel/controls/parkbrake:1)
+sw_item:Controls|FREE AND CORRECT:(sim/flightmodel2/wing/aileron1_deg[0]:><8.0)||(sim/flightmodel2/wing/elevator1_deg[0]:><8.0)||(sim/flightmodel2/wing/rudder1_deg[0]:><8.0)
+sw_item:Trims|AS REQUIRED
+sw_item:All Switches|OFF except ALTERNATOR:sim/cockpit2/electrical/generator_on[0]:1
+sw_item:Battery Master Switch|ON:thranda/electrical/Pwr:1
+sw_item:Fuel Quantities|CHECK
+sw_item:Altimeter|SET
+sw_item:Clocks|SET
+sw_item:External Lights|CHECK:(sim/cockpit2/switches/beacon_on:1)&&(sim/cockpit2/switches/navigation_lights_on:1)&&(sim/cockpit2/switches/landing_lights_on:1)%%(sim/cockpit2/switches/strobe_lights_on:1)
+sw_item:External Lights|OFF:(sim/cockpit2/switches/beacon_on:0)&&(sim/cockpit2/switches/navigation_lights_on:0)&&(sim/cockpit2/switches/landing_lights_on:0)%%(sim/cockpit2/switches/strobe_lights_on:0)
+sw_item:Battery Master Switch|OFF:thranda/electrical/Pwr:0
+sw_continue
+sw_continue:BEFORE STARTING ENGINE
+
+sw_checklist:BEFORE STARTING ENGINE
+sw_item:Tow|AsRequired
+sw_item:Tow|REMOVE:thranda/Tow:0
+sw_item:Parking brake|SET:(sim/flightmodel/controls/parkbrake:1)
+sw_item:Propeller Area|CLEAR
+sw_item:Throttle lever|OPEN 1/4 to 1/2 inch:sim/flightmodel/engine/ENGN_thro[0]:>0.1
+sw_item:Propeller Lever|FULLY DECREASE RPM :sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:<101
+sw_item:Mixture Lever|IDLE CUT-OFF:sim/cockpit2/engine/actuators/mixture_ratio_all:0
+sw_item:Carburettor hot air lever|COLD:sim/cockpit2/engine/actuators/carb_heat_ratio[0]:0
+sw_continue
+sw_continue:NORMAL ENGINE START
+
+sw_checklist:NORMAL ENGINE START
+sw_item:Propeller Area|CLEAR
+sw_item:Battery Master Switch|ON:thranda/electrical/Pwr:1
+sw_item:Beacon Light Switch|ON:sim/cockpit2/switches/beacon_on:1
+sw_item:Fuel and oil emergency cut-off lever OPEN (down)|CHECK:thranda/fuel/EmergFuelOilShutoff:1
+sw_item:Fuel Selector To fullest tank|CHECK
+sw_item:Mixture Lever RICH (full forward):sim/cockpit2/engine/actuators/mixture_ratio_all:1
+sw_item:Throttle lever|OPEN 1/4 to 1/2 inch:sim/flightmodel/engine/ENGN_thro[0]:>0.1
+sw_item:Wobble Pump Build fuel pressure to maximum 5 psi|CHECK:thranda/fuel/FuelPress:>4
+sw_remark:You can check the radial engine animation to see prime status - recommended before using prime pump
+sw_item:Prime 4 strokes|CHECK
+sw_item:Ignition Switch|BOTH:sim/cockpit2/engine/actuators/ignition_on[0]:3
+sw_item:Starter|ENGAGE:sim/cockpit2/engine/actuators/ignition_key[0]:4
+sw_remark:As soon as engine starts:
+sw_item:Throttle 500 to 800 RPM|CHECK:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:400|900
+sw_item:Oil Pressure Rising within 30 seconds|CHECK:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>50
+sw_remark:If Engine was overprimed and does not start
+sw_remark:Ignition OFF
+sw_remark:Mixture Lever IDLE CUT-OFF (aft)
+sw_remark:Throttle Lever Fully Open (forward)
+sw_remark:Starter CRANK engine 3 to 5 revolutions
+sw_remark:Repeat Normal Engine Start
+sw_continue
+sw_continue:AFTER STARTING ENGINE WARM-UP
+
+sw_checklist:AFTER STARTING ENGINE WARM-UP
+sw_item:Throttle|800 to 1000 RPM:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:800|1000
+sw_item:Propeller Lever Full forward once oil pressure reaches 50 psi:(sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>50)&&(:sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:>235)
+sw_remark:NOTE. Never rush engine warm-up
+sw_item:Oil Temperature (wait)|CHECK:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:>40
+sw_item:Oil Pressure|GREEN:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>40
+sw_item:Fuel Pressure|GREEN:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>1
+sw_item:Fuel Tank Feeds CHECK by rotating fuel selector to each tank
+sw_item:Radio Master Switch ON:sim/cockpit/electrical/avionics_on:1
+sw_continue
+sw_continue:COMMUNICATIONS AND NAVIGATION
+
+sw_checklist: COMMUNICATIONS AND NAVIGATION
+
+sw_item:Com1 Radio|ON:sim/cockpit2/radios/actuators/com1_power:1
+sw_item:Com2 Radio|ON:sim/cockpit2/radios/actuators/com2_power:1
+sw_item:Nav1 Radio|ON:sim/cockpit2/radios/actuators/nav1_power:1
+sw_item:Airport & Weather information|CHECK
+sw_item:Altimeter|ADJUST
+sw_item:Magnetic Compass|CHECK
+sw_item:File Flight Plan|CONTACT A T C 
+sw_item:Transponder|Standby:sim/cockpit/radios/transponder_mode:1
+sw_item:Transponder|ENTER CODE
+sw_continue
+sw_continue:ENGINE GROUND TESTS
+
+sw_checklist:ENGINE GROUND TESTS
+sw_item:Head aircraft into the wind|CHECK
+sw_item:Parking brake|SET:(sim/flightmodel/controls/parkbrake:1)
+sw_item:Control Column Fully Back|CHECK:sim/cockpit2/controls/yoke_pitch_ratio:1
+sw_item:Fuel Selector Fullest Tank|CHECK 
+sw_remark:If wing tip tanks are to be used, select FRONT tank
+sw_remark:if belly tank is to be used select CENTRE tank)
+sw_item:Propeller Lever INCREASE RPM (full forward)|CHECK:sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:>235
+sw_item:Throttle Lever 1750 RPM|CHECK:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:1700|1800
+sw_item:Test Left Magneto|ENGAGE LEFT:sim/cockpit/engine/ignition_on[0]:2
+sw_itemvoid:     Maximum drop   100 RPM
+sw_item:Test Right Magneto|ENGAGE RIGHT:sim/cockpit/engine/ignition_on[0]:1
+sw_itemvoid:     Maximum drop   100 RPM
+sw_item:Ignition Switch|BOTH:sim/cockpit/engine/ignition_on[0]:3
+sw_item:Throttle Lever 600 RPM:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:500|700
+sw_remark:NOTE This last check should be carried out with the minimum delay in the OFF position.
+sw_item:Ignition Switch OFF|CHECK:sim/cockpit/engine/ignition_on[0]:0
+sw_item:Ignition Switch BOTH|CHECK:sim/cockpit/engine/ignition_on[0]:3
+sw_item:Oil Temperature|CHECK:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:>50
+sw_item:Oil Pressure|GREEN:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>40
+sw_item:Fuel Pressure|GREEN:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>1
+sw_item:Cylinder Head Temperature|CHECK within limits:sim/cockpit2/engine/indicators/CHT_deg_C[0]:100|250
+sw_item:Throttle Lever 1600 RPM:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:1500|1700
+sw_item:Propeller Lever CYCLE to full aft 3 times
+sw_item:Throttle Lever 1000 RPM:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:900|1100
+sw_continue
+sw_continue:TAXIING
+
+sw_checklist:TAXIING
+sw_item: NAV light|ON:sim/cockpit2/switches/navigation_lights_on:1
+sw_item: Landing light|ON:sim/cockpit2/switches/landing_lights_on:1
+sw_item:Flaps RETRACTED|CHECK:sim/flightmodel2/controls/flap1_deploy_ratio:0
+sw_item:Propeller Lever INCREASE RPM (full forward)|CHECK:sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:>235
+sw_item:Oil Temperatures MONITOR below maximum|CHECK:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:<100
+sw_item:Cylinder Head Temperatures MONITOR below maximum|CHECK:sim/cockpit2/engine/indicators/CHT_deg_C[0]:<230
+sw_item:Brakes|CHECK
+sw_item:Tailwheel Steering|CHECK
+sw_remark:Avoid prolonged engine running above 1400 RPM while on the ground to prevent overheating
+sw_continue
+sw_continue:BEFORE TAKE OFF
+
+sw_checklist:BEFORE TAKE OFF
+sw_item:All Doors and Windows CLOSED|CHECK
+sw_item:Trim SET|CHECK
+sw_item:Mixture Lever FULL RICH|CHECK:sim/cockpit2/engine/actuators/mixture_ratio_all:1
+sw_item:Propeller Lever INCREASE RPM (full forward)|CHECK:sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:>235
+sw_item:Fuel Selector SET to desired tank|CHECK
+sw_item:Flaps AS REQUIRED|CHECK
+sw_item:Directional Gyro and Artificial Horizon SET|CHECK
+sw_item: Landing light|ON:sim/cockpit2/switches/landing_lights_on:1
+sw_item: Strobe light switch|ON:sim/cockpit2/switches/strobe_lights_on:1
+sw_item: Pitot heat|ON:sim/cockpit/switches/pitot_heat_on:1
+sw_item:Flaps Set|CHECK:sim/flightmodel2/controls/flap1_deploy_ratio:0.00|0.67
+sw_item:Fuel Quantity|Check
+sw_item:Fuel Tank Selector|FULLEST TANK:sim/cockpit2/fuel/fuel_tank_selector:!0
+sw_item:Transponder|ALT:sim/cockpit/radios/transponder_mode:3
+sw_item:Carburettor hot air lever|COLD:sim/cockpit2/engine/actuators/carb_heat_ratio[0]:0
+sw_continue
+sw_continue:TAKE OFF
+
+sw_checklist:TAKE OFF
+sw_item:Cylinder Head Temperature 100 to 230 degrees|CHECK:sim/cockpit2/engine/indicators/CHT_deg_C[0]:100|230
+sw_item:Runway LINE UP
+sw_item:Throttle 36.5 in.MP, smoothly|CHECK:sim/cockpit2/engine/indicators/MPR_in_hg[0]:36|37
+sw_itemvoid:Rudder Anticipate tendency to swing left|CHECK
+sw_itemvoid:Allow aircraft to fly itself off at 55 to 65 mph (48 to 56 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:46|58
+sw_itemvoid:As soon as a safe height is reached reduce power:
+sw_itemvoid:Maximum Continuous: 33.5 in.MP, 2200 RPM|CHECK
+sw_itemvoid:Normal Climb: 30 in.MP, 2000 RPM|CHECK
+sw_item:Airspeed INCREASE to 80 mph (70 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:>69
+sw_item:Flaps RETRACT to CLIMB at 500 feet|CHECK:sim/flightmodel2/controls/flap1_deploy_ratio:0.12069
+sw_remark:Best rate of climb is obtained at Maximum Continuous Power (33.5 in.MP, 2200 RPM).
+sw_item:Air Traffic Control|CONTACT
+sw_remark:Best rate of climb 95 mph (83 knots)
+sw_remark:Best angle of climb 80 mph (70 knots)
+sw_remark:However, the engine manufacturer recommends that 30 in.MP at 2000 RPM be used for reduced engine wear. 
+sw_remark:The rates of climb at 5,100 lbs will be 540 fpm for the landplane, and 460 fpm for the seaplane.
+sw_continue
+sw_continue:CRUISE
+
+sw_checklist:CRUISE
+sw_item:Flaps CRUISE|RETRACTED:sim/flightmodel2/controls/flap1_deploy_ratio:0
+sw_item:Power SET per cruise power chart|CHECK
+sw_item:Mixture LEAN|CHECK
+sw_item:Engine Gauges MONITOR temperatures|MONITOR:(sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:<100)&&(:sim/cockpit2/engine/indicators/CHT_deg_C[0]:<230)
+sw_continue
+sw_continue:DESCENT
+
+DESCENT
+sw_checklist:DESCENT
+sw_item:Reduce airspeed and power as required|CHECK
+sw_item:Fuel selector to fullest tank|CHECK
+sw_item:Instruments in correct ranges|CHECK(sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:<100)&&(:sim/cockpit2/engine/indicators/CHT_deg_C[0]:<230)&&(sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>40)&&(sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>1)
+sw_continue
+sw_continue:APPROACH
+
+sw_checklist:APPROACH
+sw_item:Airspeed 90 mph (78 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:<77
+sw_item:Propeller lever INCREASE RPM (full forward):sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:>235
+sw_item:Mixture Lever RICH (full forward):sim/cockpit2/engine/actuators/mixture_ratio_all:1
+sw_item:Approach Airspeed 80 mph (70 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:68|73
+sw_item:Carburetor heat "COLD" on final approach|CHECK:sim/cockpit2/engine/actuators/carb_heat_ratio[0]:0
+sw_remark:This is to ensure that full power will be available in case of a baulked landing.
+sw_continue:LANDING
+
+sw_checklist:LANDING
+sw_item:Trim AS REQUIRED
+sw_item:Touchdown attitude Pull back control column for three-point touch down
+sw_item:Control Column Hold fully back after touchdown
+sw_item:Wheel Brakes APPLY as needed
+sw_continue:MINIMUN RUN LANDING
+
+sw_checklist:MINIMUN RUN LANDING
+sw_item:Flaps LANDING (50 degrees):sim/cockpit2/controls/flap_ratio:0.75|0.85
+sw_item:Final Approach Airspeed 65 to 68 mph (56 to 59 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:53|62
+sw_item:Wheel Brakes APPLY as needed
+sw_continue:CROSSWIND TAKE-OFF AND LANDING
+
+sw_checklist:CROSSWIND TAKE-OFF AND LANDING
+sw_remark:The lateral component of wind at and below which it is safe to take off and land is not more than
+sw_remark:10 mph (8 knots) at 90 degrees for landplane, ski-plane, and seaplane.
+sw_continue:GO AROUND AND BAULKED LANDING
+
+sw_checklist:GO AROUND AND BAULKED LANDING
+sw_remark:Decide early in the approach to go around, using procedure as follows:
+sw_remark:Throttle Lever ADVANCE slowly to takeoff power
+sw_remark:Keep nose down, re-trimming as necessary to maintain normal flap down airspeeds for climb
+sw_remark:TAKE-OFF 65 mph (56 knots)
+sw_remark:CLIMB 75 mph (65 knots)
+sw_remark:CRUISE 90 mph (78 knots)
+sw_remark:Flaps RETRACT slowly when safe altitude is reached
+sw_remark:Elevator trim ADJUST as require
+sw_continue:AFTER LANDING
+
+sw_checklist:AFTER LANDING
+sw_item:Flaps CRUISE (retracted)|CHECK:sim/flightmodel2/controls/flap1_deploy_ratio:0
+sw_item:Elevator Trim NEUTRAL|CHECK
+sw_item:External Lights AS REQUIRED|CHECK
+sw_continue:STOPPING THE ENGINE
+
+sw_checklist:STOPPING THE ENGINE
+sw_item:Throttle Idle|CHECK:sim/flightmodel/engine/ENGN_thro[0]:0
+sw_item:Engine RPM CHECK 450 to 550 RPM|CHECK:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:400|600
+sw_item:Oil Pressure|GREEN:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>40
+sw_item:Fuel Pressure|GREEN:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>1
+sw_remark: following to check magneto grounding
+sw_item:Ignition Switch OFF|CHECK:sim/cockpit/engine/ignition_on[0]:0
+sw_item:Ignition Switch BOTH|CHECK:sim/cockpit/engine/ignition_on[0]:3
+sw_remark:Allow engine to idle for a short period to assist it in gradually cooling down.
+sw_item:Radio Master Switch|OFF:sim/cockpit/electrical/avionics_on:0
+sw_item:Throttle Lever 1000 – 1200 RPM|CHECK:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:900|1300
+sw_item:Propeller Lever DECREASE RPM (full aft|CHECK):sim/cockpit2/engine/actuators/prop_rotation_speed_rad_sec_all:<101
+sw_item:Throttle Lever 800 RPM|CHECK:sim/cockpit2/engine/indicators/engine_speed_rpm[0]:700|900
+sw_item:Mixture Lever IDLE CUT OFF|CHECK:sim/cockpit2/engine/actuators/mixture_ratio_all:0
+sw_item:Ignition Switch OFF after propellor stop|CHECK:sim/cockpit/engine/ignition_on[0]:0
+sw_item:Wing Tip Tank Selector|CHECK OFF
+sw_item:Main fuel tank Selector|OFF
+sw_item:All Switches OFF except ALTernator switch::sim/cockpit2/electrical/generator_on[0]:1
+
+
