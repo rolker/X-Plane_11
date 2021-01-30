@@ -178,7 +178,7 @@ sw_item:Cylinder Head Temperature 100 to 230 degrees|CHECK:sim/cockpit2/engine/i
 sw_item:Runway LINE UP
 sw_item:Throttle 36.5 in.MP, smoothly|CHECK:sim/cockpit2/engine/indicators/MPR_in_hg[0]:36|37
 sw_itemvoid:Rudder Anticipate tendency to swing left|CHECK
-sw_itemvoid:Allow aircraft to fly itself off at 55 to 65 mph (48 to 56 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:46|58
+sw_item:Allow aircraft to fly itself off at 55 to 65 mph (48 to 56 knots)|CHECK:sim/flightmodel/position/indicated_airspeed:46|58
 sw_itemvoid:As soon as a safe height is reached reduce power:
 sw_itemvoid:Maximum Continuous: 33.5 in.MP, 2200 RPM|CHECK
 sw_itemvoid:Normal Climb: 30 in.MP, 2000 RPM|CHECK
@@ -198,6 +198,17 @@ sw_item:Flaps CRUISE|RETRACTED:sim/flightmodel2/controls/flap1_deploy_ratio:0
 sw_item:Power SET per cruise power chart|CHECK
 sw_item:Mixture LEAN|CHECK
 sw_item:Engine Gauges MONITOR temperatures|MONITOR:(sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:<100)&&(:sim/cockpit2/engine/indicators/CHT_deg_C[0]:<230)
+sw_remark: Gal/Hour      16.9          18.2          19.8           22            25            28.5
+sw_remark:  B.H.P         200           220           240           260           280           300
+sw_remark:Sea Level  1600-26.7  1600-28.5  1650-29.5  1750-29.7  1900-29.2  2000-29.7
+sw_remark:     1000    1600-26.5  1600-28.5  1650-29.2  1750-29.7  1900-29.2  2000-29.5
+sw_remark:     2000    1600-26.0  1600-27.7  1650-29.0  1750-29.2  1900-28.7  2000-29.2
+sw_remark:     3000    1600-25.7  1600-27.5  1650-28.7  1750-29.0  1900-28.5  2000-29.0
+sw_remark:     4000    1600-25.5  1600-27.0  1650-28.2  1750-28.7  1900-28.2  2000-28.5
+sw_remark:     5000    1600-25.2  1600-26.7  1650-28.0  1750-28.2  1900-28.0  2000-28.2
+sw_remark:     6000    1600-25.2  1600-26.5  1700-27.5  1750-27.7  1900-27.7  2000-20
+sw_remark:     7000    1600-25.0  1600-26.2  1700-27.0  1750-27.2  1900-27.5  2000-27.7
+sw_remark:     8000    1600-24.7  1600-26.0  1700-25.5  1800-26.7  1900-27.2  2000-27.5
 sw_continue
 sw_continue:DESCENT
 
