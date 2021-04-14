@@ -131,7 +131,7 @@ sw_item:Throttle Lever 600 RPM:sim/cockpit2/engine/indicators/engine_speed_rpm[0
 sw_remark:NOTE This last check should be carried out with the minimum delay in the OFF position.
 sw_item:Ignition Switch OFF|CHECK:sim/cockpit/engine/ignition_on[0]:0
 sw_item:Ignition Switch BOTH|CHECK:sim/cockpit/engine/ignition_on[0]:3
-sw_item:Oil Temperature|CHECK:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:>50
+sw_item:Oil Temperature|CHECK:sim/cockpit2/engine/indicators/oil_temperature_deg_C[0]:>40
 sw_item:Oil Pressure|GREEN:sim/cockpit2/engine/indicators/oil_pressure_psi[0]:>40
 sw_item:Fuel Pressure|GREEN:sim/cockpit2/engine/indicators/fuel_pressure_psi[0]:>1
 sw_item:Cylinder Head Temperature|CHECK within limits:sim/cockpit2/engine/indicators/CHT_deg_C[0]:100|250
