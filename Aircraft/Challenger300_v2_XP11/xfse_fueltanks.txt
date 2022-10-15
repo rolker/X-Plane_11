@@ -1,0 +1,4 @@
+# XFSE Fuel Tank Config - created by FSE FuelTanksConfig 1.1
+# XFSE Fuel Tank Config - created on 07/22/21 14:55:09
+0 1 
+# XFSE Fuel Tank Config - EOF

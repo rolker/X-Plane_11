@@ -1,0 +1,214 @@
+# Checklist "Normal Procedures" for Challenger C300 V2 by dden 
+
+sw_checklist:// Challenger C300 (V2.09) Checklist \\:NORMAL PROCEDURES
+sw_itemvoid: ==================================
+sw_itemvoid:                        NORMAL PROCEDURES
+sw_itemvoid:                                 Version 1.0.1
+sw_itemvoid:                                by Belgarath
+sw_itemvoid: ==================================
+sw_itemvoid:
+sw_itemvoid:          Thanks to dden for this wonderful biz jet.
+
+
+sw_checklist: APU Start:APU Start
+sw_itemvoid: DOCS / SAFETY EQP / VOR|CHECKED
+sw_itemvoid: SWITCHES / CBS|CHECKED
+sw_item: GEAR HANDLE|DOWN:sim/cockpit2/controls/gear_handle_down:1
+sw_item: L / R AND AUX HYD PUMPS|OFF:(cl300/hd_l_pump_state:0)&&(cl300/hd_r_pump_state:0)
+sw_item: AIR SOURCE|OFF:cl300/aircond_airsource:0
+sw_item: STBY INST SWITCH|ON / 60 SEC MIN:cl300/electr_stbi_h:1
+sw_item: L BATT|ON / 20 VOLTS MIN:(cl300/left_bat_h:1)&&(sim/cockpit2/electrical/battery_voltage_indicated_volts[0]:>20)
+sw_item: R BATT|ON:cl300/right_bat_h:1
+sw_item: CAS|APU / NORMAL FAULTS
+sw_item: LIGHTS|NAV / AS REQ:sim/cockpit2/switches/navigation_lights_on:1
+sw_item: L / R FUEL PUMPS|AUTO:(cl300/fuel_xpump_l:1)&&(cl300/fuel_xpump_r:1)
+sw_item: APU|START:sim/cockpit2/electrical/APU_starter_switch:2
+sw_item: ELECTRICS|CHECK
+sw_item: L AND R BLEEDS|OFF:(cl300/bleed_en_l_h:0)&&(cl300/bleed_en_r_h:0)
+sw_item: APU BLEED|ON:cl300/bleed_apu_h:1
+sw_item: XBLEED|OPEN:cl300/bleed_xbleed_h:1
+sw_item: AIR SOURCE|NORM:cl300/aircond_airsource:1
+sw_itemvoid:
+sw_itemvoid:             1 of 14 - Next INITAL CHECK 1/2
+
+
+sw_checklist: INITAL CHECK (1/2):INITAL CHECK 1/2
+sw_itemvoid: O2 MASKS / GOOGLES|CHECKED
+sw_itemvoid: OXYGEN QUANTITY|CHECK
+sw_item: FUEL QUANTITY|CHECK
+sw_item: STBY INSTRUMENT|CHECKED
+sw_item: CLOCK|RESET
+sw_item: NWS|OFF:cl300/nws_h:0
+sw_item: RAM AIR|CHECKED/OFF:cl300/aircond_ramair_h:0
+sw_item: AIR COND / BLEEDS|CHECKED / SET
+sw_item: PRESSURIZATION PANEL|SET / LNDG ELEV
+sw_item: ANTI-ICE|WING SOURCE NORM:cl300/antice_wngsource_r:1
+sw_item: PROBES|OFF:(cl300/antice_probe_l_h:0)&&(cl300/antice_probe_r_h:0)
+sw_item: REVERSION PANEL|NORMAL:(cl300/rev_pan_l:1)&&(cl300/rev_tune:2)&&(cl300/rev_pan_r:1)&&(cl300/rev_att_hd:1)&&(cl300/rev_air_dat:1)
+sw_item: LTS / EMER LTS|SET / ARMED:cl300/emeright_h:1
+sw_item: L / R HYD PUMP / BRAKES|ON / SET:(cl300/l_hpump_h:2)&&(cl300/r_hpump_h:2)&&(sim/cockpit2/controls/parking_brake_ratio:1)
+sw_item: AUX HYD PUMP|AUTO / CHECKED:cl300/aux_hpump_h:1
+sw_item: HYD PANEL|AUTO::(cl300/l_hpump_h:1)&&(cl300/r_hpump_h:1)
+sw_item: GUST LOCK|ON:cl300/gust_lock:1
+sw_itemvoid:
+sw_itemvoid:             2 of 14 - Next INITAL CHECK 2/2
+
+
+sw_checklist: INITAL CHECK (2/2):INITAL CHECK 2/2
+sw_item: ENGINE RUN SWITCHES|OFF:(cl300/en_but_run_l:0)&&(cl300/en_but_run_r:0)
+sw_item: TRIM SYSTEM|CHECKED / PRI / SET
+sw_item: SYSTEMS TEST|COMPLETE
+sw_item: ELT|AS REQ
+sw_item: CABIN CONTROL PANEL|AS REQ
+sw_item: PAX OXYGEN PANEL|AUTO:cl300/oxigen_ox:1
+sw_item: ALTIMETERS|SET
+sw_item: FMS|INITIALIZE / SET
+sw_item: AVIONICS|SET
+sw_item: V-SPEEDS|POSTED
+sw_item: CAS MESSAGES|CHECKED
+sw_item: AIRSHOW / LTS / GALLEY|ON / AS REQ
+
+sw_itemvoid:
+sw_itemvoid:             3 of 14 - Next ENGINE START
+
+
+sw_checklist: ENGINE START:ENGINE START
+sw_item: WX / CLEARANCE / FMS|BRIEFED / LOADED
+sw_item: DOOR / BCN / SIGNS|CLOSED / ON / ON:(cl300/customslider2:0)&&(cl300/strobe_h:1)&&(cl300/smokebelts_h:2)
+sw_item: PARK / EMER BRAKE|SET / PRESS>2000 PSI:(sim/flightmodel/controls/parkbrake:1)&&(sim/cockpit2/hydraulics/indicators/hydraulic_pressure_1:>2000)
+sw_item: CHOCKS|REMOVED:cl300/rembf10:1
+sw_item: GUST LOCK|OFF:cl300/gust_lock:0
+sw_item: THRUST LEVERS|IDLE:cl300/carets:0
+sw_item: ENGINE RUN SWITCHES|ON:(cl300/en_but_run_l:1)&&(cl300/en_but_run_r:1)
+sw_item: ENGINE START (<350°)|AREA CLEAR
+
+sw_itemvoid:
+sw_itemvoid:             4 of 14 - Next AFTER START
+
+
+sw_checklist: AFTER START:AFTER START
+sw_item: YAW DAMPER|ON:sim/cockpit/switches/yaw_damper_on:1
+sw_item: WING ANTI-ICE|ON (2 MIN CHECK):cl300/antice_wing_h:1
+sw_item: WINDSHIELD HEATS|ON:(cl300/antice_wshld_l_h:1)&&(cl300/antice_wshld_r_h:1)
+sw_item: FLAPS|SET FOR TAKE OFF:sim/flightmodel/controls/flaprqst:>0
+sw_item: HYDRAULICS|CHECKED
+sw_item: FLT AND GROUND SPOILERS|CHECKED / AUTO:cl300/ground_sp_h:1
+sw_item: FLIGHT CONTROLS|CHECKED
+sw_item: GENS & ELECTRICS|CHECKED
+sw_item: TRIMS|CALCULATED / SET
+sw_item: PFD BRIEF|COMPLETE
+sw_item: DEPARTURE BRIEF|COMPLETE
+sw_item: RADAR / TERRAIN|AS REQ
+sw_item: ANTI-ICE PANEL|CHECKED / AS REQ
+sw_itemvoid: PASSENGERS|BRIEFED
+sw_item: NWS|ON:cl300/nws_h:1
+sw_item: CAS|CHECKED
+sw_itemvoid:
+sw_itemvoid:             5 of 14 - Next TAXI
+
+
+sw_checklist: TAXI:TAXI
+sw_item: BRAKES / NWS|CHECKED
+sw_item: FUEL BALANCE|CHECKED
+sw_item: THRUST REV|CHECKED:(cl300/l_engn_rev_rat:>1)&&(cl300/r_engn_rev_rat:>1)
+sw_item: ENGINE INST & N1 BUGS|CHECKED & AGREE <1%
+sw_item: FLAPS|SET FOR TAKE OFF:sim/flightmodel/controls/flaprqst:>0
+sw_itemvoid:
+sw_itemvoid:             6 of 14 - Next LINE-UP
+
+
+sw_checklist: LINE-UP:LINE-UP
+sw_item: CABIN SIGN|CYCLE / ON:(cl300/smokebelts_h:2)
+sw_item: PROBES / ANTI-ICE|ON / AS REQ:(cl300/antice_probe_l_h:1)&&(cl300/antice_probe_r_h:1)
+sw_item: LIGHTS & STROBES|ON / AS REQ:(cl300/nav_h:1)&&(cl300/strobe_h:2)&&(cl300/landlight1:1)&&(cl300/landlight2:1)&&(cl300/xap_taxilight_h:2)
+sw_item: TRANSPONDER|ON:sim/cockpit/radios/transponder_mode:5
+sw_item: CAS|CHECKED & STACKED
+sw_itemvoid:
+sw_itemvoid:             7 of 14 - Next AFTER TAKE OFF
+
+
+sw_checklist: AFTER TAKE OFF:AFTER TAKE OFF
+sw_item: LDG GEAR & FLAPS|UP:(sim/cockpit2/controls/gear_handle_down:0)&&(sim/flightmodel/controls/flaprqst:0)
+sw_item: TAXI LGT|OFF:cl300/xap_taxilight_h:0
+sw_item: THRUST LEVERS|CLIMB DETENT / AS REQ:cl300/carets:2
+sw_item: L / R HYD PUMP|OFF:(cl300/l_hpump_h:0)&&(cl300/r_hpump_h:0)
+sw_item: BLEEDS|TRANSFERRED / AS REQ:(cl300/bleed_en_l_h:1)&&(cl300/bleed_en_r_h:1)&&(cl300/bleed_xbleed_h:0)&&(cl300/bleed_apu_h:0)
+sw_item: PRESSURIZATION|CHECKED
+sw_item: APU|SHUTDOWN / AS REQ:cl300/electr_apugen_h:0
+sw_item: CAS|CHECKED
+sw_itemvoid:
+sw_itemvoid:             8 of 14 - Next TRANS ALT
+
+
+sw_checklist: TRANS ALT:TRANS ALT
+sw_item: ALTIMETERS|SET
+sw_itemvoid: O2 MASKS|CHECKED
+sw_item: CABIN SIGN|AS REQ
+sw_item: EXTERIOR LIGHTS|AS REQ
+sw_itemvoid:
+sw_itemvoid:             9 of 14 - Next TRANS LVL
+
+
+sw_checklist: TRANS LVL:TRANS LVL
+sw_item: ALTIMETERS|SET
+sw_item: FUEL QTY / BALANCE|CHECKED
+sw_item: LANDING ELEV|CONFIRMED
+sw_item: ANTI-ICE|AS REQ
+sw_item: EXTERIOR LIGHTS|ON:(cl300/landlight1:1)&&(cl300/landlight2:1)&&(cl300/xap_taxilight_h:2)
+sw_item: LANDING DATA|POSTED
+sw_item: LANDING / MFD BRIEF|COMPLETE
+sw_itemvoid:
+sw_itemvoid:             10 of 14 - Next APPROACH 10.000 FT
+
+
+sw_checklist: APPROACH 10.000 FT:APPROACH 10.000 FT
+sw_item: APU & BLEEDS|AS REQ
+sw_item: CABIN SIGN|AS REQ
+sw_item: L / R HYD PUMPS|AUTO:(cl300/l_hpump_h:1)&&(cl300/r_hpump_h:1)
+sw_itemvoid:
+sw_itemvoid:             11 of 14 - Next BEFORE LANDING
+
+
+sw_checklist: BEFORE LANDING:BEFORE LANDING
+sw_item: LANDING GEAR|DOWN, 3 GREEN:sim/cockpit2/controls/gear_handle_down:1
+sw_item: N LDG LIGHT|ON / CLEARED TO LND:(cl300/landlight1:1)&&(cl300/landlight2:1)&&(cl300/xap_taxilight_h:2)
+sw_item: FLAPS|SET
+sw_item: CAS|CHECKED
+sw_itemvoid:
+sw_itemvoid:             12 of 14 - Next AFTER LANDING
+
+
+sw_checklist: AFTER LANDING:AFTER LANDING
+sw_item: PROBES|OFF:(cl300/antice_probe_l_h:0)&&(cl300/antice_probe_r_h:0)
+sw_item: WINDSHIELD HEAT|OFF / AS REQ:(cl300/antice_wshld_l_h:0)&&(cl300/antice_wshld_r_h:0)
+sw_item: ANTI-ICE|OFF / AS REQ:(cl300/antice_wing_h:0)&&(cl300/antice_engn_l_h:0)&&(cl300/antice_engn_r_h:0)
+sw_item: FLAPS|RETRACTED:sim/flightmodel/controls/flaprqst:0
+sw_item: LIGHTS / STROBES|AS REQ
+sw_item: TRANSPONDER|STBY / AS REQ:sim/cockpit/radios/transponder_mode:1
+sw_itemvoid:
+sw_itemvoid:             13 of 14 - Next SHUTDOWN
+
+
+sw_checklist: SHUTDOWN:SHUTDOWN
+sw_item: CHOCKS / BRAKES|SET:(cl300/rembf10:0)&&(sim/cockpit2/controls/parking_brake_ratio:1)
+sw_item: NWS|OFF:cl300/nws_h:0
+sw_item: ENGINE BLEEDS|OFF:(cl300/bleed_en_l_h:0)&&(cl300/bleed_en_r_h:0)
+sw_item: ENGINE RUN SWITCHES|OFF:(cl300/en_but_run_l:0)&&(cl300/en_but_run_r:0)
+sw_item: ANTI-ICE / WINDSHIELD HEATS|OFF:(cl300/antice_wshld_l_h:0)&&(cl300/antice_wshld_r_h:0)&&(cl300/antice_probe_l_h:0)&&(cl300/antice_probe_r_h:0)&&(cl300/antice_wing_h:0)&&(cl300/antice_engn_l_h:0)&&(cl300/antice_engn_r_h:0)
+sw_item: L / R PTU HYD|OFF:(cl300/l_hpump_h:0)&&(cl300/r_hpump_h:0)&&(cl300/ptu_h:0)
+sw_item: AUX HYD|OFF:cl300/aux_hpump_h:0
+sw_item: GUST LOCK|ON:cl300/gust_lock:1
+sw_item: COCKPIT LIGHTING|RESET FOR 'DAY'
+sw_item: APU|SHUTDOWN:cl300/electr_apugen_h:0
+sw_item: AIR SOURCE|OFF:cl300/aircond_airsource:0
+sw_item: LTS / EMER LTS|OFF:(cl300/emeright_h:0)&&(cl300/wing_insp_h:0)&&(cl300/nav_h:0)&&(cl300/strobe_h:0)&&(cl300/landlight1:0)&&(cl300/landlight2:0)&&(cl300/xap_taxilight_h:0)
+sw_item: STBY INST|OFF:cl300/electr_stbi_h:0
+sw_item: L / R BATT|OFF:(cl300/left_bat_h:0)&&(cl300/right_bat_h:0)
+sw_item: PARK BRAKE|AS REQ
+sw_itemvoid: CABIN|CLEAN/RESTOCKED
+sw_itemvoid:
+sw_itemvoid: ===============================
+sw_itemvoid:          Good bye and enjoy a nice cup of coffee...
+sw_itemvoid: ===============================
+sw_itemvoid:
+sw_itemvoid:             14 of 14 - END
