@@ -1,0 +1,35 @@
+sw_checklist:Pre-Flight
+sw_item:Master Battery|On
+sw_item:Fuel Quantity|Check
+sw_item:Tail Rotor|Check Rotor Blades Move with Input
+sw_item:Main Rotor|Check Rotor Blades Move with Input
+sw_item:Landing Lights|Check
+sw_item:Master Battery|Off
+sw_continue:Before Start Engine
+
+sw_checklist:Before Start Engine
+sw_item:Doors|Closed and Latched
+sw_item:Fuel Shut-Off|On
+sw_item:Cyclic Friction|Off
+sw_item:Throttle|Idle
+sw_item:Governor|Off
+sw_item:Carb Heat|Off
+sw_item:Mixture|Full Rich
+sw_item:Clutch|Disengaged
+sw_item:Altimeter|Set
+sw_item:Rotor Brake|Disengaged
+sw_continue:Engine Start
+
+sw_checklist:Engine Start
+sw_item:Master Battery|On
+sw_item:Throttle|Closed
+sw_item:Strobe|On
+sw_item:Starter Key|Start, then Both
+sw_item:Clutch|Engaged
+sw_item:Alternator|On
+sw_item:Oil Pressure|Check
+sw_item:Engine Gages|Green
+sw_item:Magnetos Left Only|Check
+sw_item:Magnetos Right Only|Check
+sw_item:Magnetos Both|Check
+sw_item:Governor|On
